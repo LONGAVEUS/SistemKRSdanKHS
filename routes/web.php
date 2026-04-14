@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\OrderController;
 
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
@@ -16,4 +17,5 @@ Route::prefix('admin')->group(function () {
 
 Route::get('/barang', [BarangController::class, 'tampilkan']);
 Route::get('/customer', [CustomerController::class, 'tampilkan']);
+Route::get('/order', [OrderController::class, 'tampilkan']);
 ?>
